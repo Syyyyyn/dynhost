@@ -48,7 +48,7 @@ $ chmod 740 settings.py
 
 **Runnning a cron job**
 
-To ensure the DNS zone is updated frequently, running the script every 30 minutes is recommanded (for a TTL of 3600). Replace `/root/dynhost/dynhost.py` with the absolute path of the script.
+To ensure the DNS zone is updated frequently, running the script every 30 minutes is recommended (for a TTL of 3600). Replace `/root/dynhost/dynhost.py` with the absolute path of the script.
 
 ```
 $ echo '*/30 * * * * root /usr/bin/python3 /root/dynhost/dynhost.py' >> /etc/crontab && service cron restart
