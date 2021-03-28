@@ -4,11 +4,12 @@ from datetime import datetime
 from nslookup import Nslookup as nslookup
 
 def log(message, error):
-    path = '{parent_dir}/logs/{filename}.log'.format(
-        parent_dir = os.path.dirname(os.path.realpath(__file__)),
-        filename = datetime.now().strftime('%d-%m-%Y')
-    )
-    open(path, 'a').write(message + '\n')
+    if os.path.exists('./logs'):
+        log_file = '{parent_dir}/logs/{filename}.log'.format(
+            parent_dir = os.path.dirname(os.path.realpath(__file__)),
+            filename = datetime.now().strftime('%d-%m-%Y')
+        )
+        open(log_file, 'a').write(message + '\n')
     if error == 0: print(message)
     else: sys.exit(message)
 
