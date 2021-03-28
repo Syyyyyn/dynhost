@@ -40,7 +40,7 @@ if not public_ip == dns_lookup:
             domain = domain,
             ip = public_ip
         )
-        os.popen('curl -u {username}:{password} "{request}"'.format(
+        os.popen('curl -su {username}:{password} "{request}" > /dev/null'.format(
             username = settings.dynhost_creds['username'],
             password = settings.dynhost_creds['password'],
             request = request
