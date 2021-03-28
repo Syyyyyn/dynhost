@@ -46,6 +46,14 @@ It is higly recommanded to change the permissions of this file in order to prote
 $ chmod 740 settings.py
 ```
 
+**Runnning a cron job**
+
+To ensure the DNS zone is updated frequently, running the script every 30 minutes is recommanded (for a TTL of 3600). Replace `/root/dynhost/dynhost.py` with the absolute path of the script.
+
+```
+$ echo '*/30 * * * * root /usr/bin/python3 /root/dynhost/dynhost.py' >> /etc/crontab && service cron restart
+```
+
 ## Quick use
 
 ```
