@@ -12,7 +12,7 @@ This application requires Python3 :
 $ apt install python3 python3-pip
 ```
 
-You also need to install `nslookup` module for Python3 (more about this module at https://pypi.org/project/nslookup/) :
+You also need to install `nslookup` module for Python3 (https://pypi.org/project/nslookup/) :
 
 ```
 $ pip3 install nslookup
