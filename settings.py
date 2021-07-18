@@ -1,5 +1,5 @@
-domain = 'exemple.com'
-dns_server = '1.1.1.1'
+zone = 'exemple.com'
+nameservers = ['1.1.1.1', '1.0.0.1']
 dynhost_creds = {
     'username': 'exemple.com-dynhost',
     'password': 'P@ssw0rd'
