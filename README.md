@@ -38,7 +38,7 @@ Edit `settings.py` with your informations :
 
 ```python
 zone = 'exemple.com'
-nameservers = ['1.1.1.1', '1.0.0.1']
+nameservers = ['213.251.128.150', '213.251.188.150']
 dynhost_creds = {
     'username': 'exemple.com-dynhost',
     'password': 'P@ssw0rd'
