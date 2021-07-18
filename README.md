@@ -18,6 +18,12 @@ You also need to install `nslookup` module for Python3 (https://pypi.org/project
 $ pip3 install nslookup
 ```
 
+cURL is required to perform queries to OVH API :
+
+```
+$ apt install curl
+```
+
 ### Installation
 
 **Cloning the repository**
@@ -31,8 +37,8 @@ $ git clone https://github.com/Syyyyyn/dynhost.git
 Edit `settings.py` with your informations :
 
 ```python
-domain = 'exemple.com'
-dns_server = '1.1.1.1'
+zone = 'exemple.com'
+nameservers = ['1.1.1.1', '1.0.0.1']
 dynhost_creds = {
     'username': 'exemple.com-dynhost',
     'password': 'P@ssw0rd'
