@@ -54,7 +54,7 @@ $ chmod 640 settings.py
 
 **Runnning a cron job**
 
-To ensure the DNS zone is updated frequently, running the script every 30 minutes is recommended (for a TTL of 3600). Replace `/root/dynhost/dynhost.py` with the absolute path of the script.
+To ensure the DNS zone is updated frequently, running the script every 30 minutes is recommended (for a TTL of 3600). Replace `/root/dynhost/dynhost.py` with the absolute path to `dynhost.py`.
 
 ```
 $ echo '*/30 * * * * root /usr/bin/python3 /root/dynhost/dynhost.py' >> /etc/crontab && service cron restart
@@ -73,13 +73,14 @@ The application will automatically output logs to the console as follwed :
 ```
 $ python3 dynhost.py
 ---
-28-03-2021 12:46:58 :
-[+] Public IP address is 67.129.182.203
-[+] DNS record for exemple.com is 107.180.40.145
+18-07-2021 15:00:01 :
+[+] Public IP address is 213.251.128.150
+[+] Resolving exemple.com
+[+] Current IP address for exemple.com is 213.251.188.150
 [+] Updating exemple.com
 [+] Updating www.exemple.com
 [+] Updating mail.exemple.com
-[+] DNS zone for exemple.com was updated
+[+] DNS zone for naonetworks.fr was updated
 ```
 
 If you wish to keep track of these actions, simply create a `logs` folder in the same directory as `dynhost.py`.
