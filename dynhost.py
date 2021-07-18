@@ -41,11 +41,11 @@ log('[+] Public IP address is {public_ip}'.format(public_ip=public_ip), 0)
 log('[+] Resolving {zone}'.format(zone=settings.zone), 0)
 nslookup_response = None
 if settings.nameservers == '':
-    if not nslookup(dns_servers=['1.1.1.1', '1.0.0.1']).dns_lookup(settings.zone).answer: log('[-] ERROR: Could not resolve {zone} (EMPTY_RESPONSE).'.format(zone=settings.zone), 1)
-    else: nslookup_response = nslookup(dns_servers=['1.1.1.1', '1.0.0.1']).dns_lookup(settings.zone).answer[0]
+    if not nslookup(dns_servers=['213.251.128.150', '213.251.188.150']).dns_lookup(settings.zone).answer: log('[-] ERROR: Could not resolve {zone} (EMPTY_RESPONSE).'.format(zone=settings.zone), 1)
+    else: nslookup_response = nslookup(dns_servers=['213.251.128.150', '213.251.188.150']).dns_lookup(settings.zone).answer[0]
 else:
     if not nslookup(dns_servers=settings.nameservers).dns_lookup(settings.zone).answer: log('[-] ERROR: Could not resolve {zone} (EMPTY_RESPONSE).'.format(zone=settings.zone), 1)
-    else: nslookup_response = nslookup(dns_servers=['1.1.1.1', '1.0.0.1']).dns_lookup(settings.zone).answer[0]
+    else: nslookup_response = nslookup(dns_servers=['213.251.128.150', '213.251.188.150']).dns_lookup(settings.zone).answer[0]
 log('[+] Current IP address for {zone} is {ip}'.format(zone=settings.zone, ip=nslookup_response), 0)
 
 # Update DNS zone
