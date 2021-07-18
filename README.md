@@ -49,7 +49,7 @@ dns_records = ['exemple.com', 'www.exemple.com', 'mail.exemple.com']
 It is higly recommanded to change the permissions of this file in order to protect sensitive informations :
 
 ```
-$ chmod 740 settings.py
+$ chmod 640 settings.py
 ```
 
 **Runnning a cron job**
